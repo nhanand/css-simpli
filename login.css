@@ -1,0 +1,17 @@
+form{
+    border: 3px solid white;
+    background-color: white;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100px;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: beige;
+}

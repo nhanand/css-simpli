@@ -1,0 +1,280 @@
+css - cascading stylesheet 
+---
+
+agenda :
+
+- explain basis of css, classify different ways to add css, applying styling feature in css
+
+- css types
+  1 external
+  2 internal
+  3 inline
+
+- css for inputs, css color , background color
+
+- css pading, css padding: shorthand property
+
+- css fieldset, grouping form elements with fieldset, styling with css in fieldset, display:inline-grid, display:flex or display:inline-flex
+
+- css selector with five categories line simple selector, pseudo element selectors, pseudo class selectors, combinatior selector, attribute selectors
+
+- css element slector, css id selector , css class selector, css universal selector, css grouping selector
+
+- use of class in css, how to create class in css, using id with css
+
+- css math functions like calc(), max(), min() etc
+
+======================================================
+adv
+
+less coding 
+more styling options
+standarizatiin
+Better performance
+
+================================
+syntax
+
+p{your css code}
+
+eg P{color:blue, font-family:Avenir;}
+   
+   P -> selector
+
+   color:blue
+    |      |
+ property  value
+
+   color:blue   (whole is caller declaration)
+
+===================================================
+
+styling individual component p
+
+ <p style="color:black;">for individual tag</p>
+
+=====================================================
+
+internal 
+--------
+
+all code including css in same page
+
+eg <!DOCTYPE html>
+<html>
+    <head>
+        <title>basic css Example</title>
+
+        <!-- simple css interbnal css-->
+        <style>
+            p{
+                color: rgb(5, 127, 135);
+                font-size: 13px;
+            }
+
+            h1{
+                background-color: pink;
+            }
+
+           body{
+            background-color: bisque;
+           }
+
+           form{
+            background-color: aquamarine;
+           }
+        </style>
+    </head>
+
+    <body>
+        <p>this is a demo for undertsanding intenal css</p>
+        <p>this is a demo text</p>
+
+        <!-- for indivudual component - inline css -->
+        <p style="background-color:purple; font-size: 25px;">demo inline css</p>
+
+        <h1>internal css example</h1>
+
+        <form>
+            <label>input1</label>
+           <input type="text"><br>
+           <label>input2</label>
+           <input type="text"><br>
+           <label>input3</label>
+           <input type="text"><br>
+        </form>
+
+    </body>
+</html>
+
+================================================================================
+
+external 
+-------
+
+css is provided into another page and is link with html page in head section using link
+ 
+ <link rel="stylesheet" href="external.css">
+
+============================================================================
+
+
+class and  css  selector
+*************************
+
+element selector
+----------------
+
+- it is simple.
+
+ p{
+            font-size: 30px;
+            background-color: red;
+            padding: 12px;
+            border: 14px solid;
+            font-style: italic;
+        }
+
+ <p>this is element selector example</p>
+     =====================**********======================
+
+
+id selector
+-----------
+
+- for id selector we use # sign for styling in css.
+
+syntax - under head under style
+====----======--------------
+
+  #id-selector{
+            background-color: orchid;
+        }
+
+under body
+
+ <h1 id="id-selector">this is example of id-selector</h1>
+
+ =====================**********======================
+
+
+unversal selector
+----------------
+
+under head under style
+ 
+*{}
+
+- nothing to write in body , it is valid for all.
+==================***********************=====================
+
+ /* css for input */
+---------------------
+
+        input[type="text"]{
+            padding: 14px;
+
+        }
+
+ <input type="text" placeholder="firstname">
+
+=====================================================================================
+
+
+fieldset and grouping form elements
+-----------------------------------
+
+- it provide a border 
+- used with legend tag
+- linited scope
+- div cannot provide order self. we have to write seperate styling for this
+
+<fieldset>
+            <legend>Personal information</legend>
+            <input type="text" placeholder="enter your name">
+            <input type="text" placeholder="email">
+        </fieldset>
+
+for styling we can use 
+
+<style>
+            fieldset{
+                border: 3px solid red;
+                padding: 20px;
+            }
+        </style>
+
+======================================================================================
+
+
+- . is use to display the container.
+- it can be applied with div in class
+
+eg 1  - in style
+
+.flex-container{
+    display: flex;
+}
+
+under body
+
+ <div class="flex-container`">
+        <div>item1</div>
+        <div>item2</div>
+    </div>
+-------------------
+
+ex 2 
+- to display only specific property
+- inherit is used.
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS display property</title>
+            <style>
+                .flex-container{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    background-color: blue;
+                }
+    
+                .flex-container > div {
+                    background-color: aqua;
+                    width: 12px;
+                    margin: 10px;
+                    text-align: center;
+                    font-size: 30px;
+                }
+            </style>
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </body>
+
+</html>
+
+=========================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
