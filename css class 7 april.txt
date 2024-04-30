@@ -186,7 +186,7 @@ fieldset and grouping form elements
 
 - it provide a border 
 - used with legend tag
-- linited scope
+- limited scope
 - div cannot provide order self. we have to write seperate styling for this
 
 <fieldset>
